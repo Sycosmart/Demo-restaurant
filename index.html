@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>brasa · Hamburguesas a la brasa</title>
+  <meta name="description" content="brasa — hamburguesas hechas a la brasa con carne 100% de res, pan artesanal e ingredientes locales. Pedí ahora en Santa Cruz de la Sierra." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ░░ Navigation ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <nav class="nav__group nav__group--left" aria-label="Principal">
+        <a href="#menu">Nuestro menú</a>
+        <a href="#historia">Nosotros</a>
+        <a href="#locales">Locales</a>
+      </nav>
+
+      <a href="#top" class="nav__brand" aria-label="brasa inicio">brasa</a>
+
+      <div class="nav__group nav__group--right">
+        <a href="#pedido" class="nav__signin">Ingresar</a>
+        <a href="#pedido" class="btn btn--order">Ordenar</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav__mobile" id="navMobile" aria-label="Menú móvil">
+      <a href="#menu">Nuestro menú</a>
+      <a href="#historia">Nosotros</a>
+      <a href="#locales">Locales</a>
+      <a href="#pedido" class="btn btn--order">Ordenar</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ░░ Hero ░░ -->
+    <section class="hero">
+      <div class="hero__frame">
+        <div class="hero__slides" id="heroSlides">
+          <img class="is-active" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2000&q=80" alt="Mesa servida con hamburguesas y acompañamientos" loading="eager" />
+          <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=2000&q=80" alt="Hamburguesas recién hechas" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=2000&q=80" alt="Hamburguesa doble a la brasa" loading="lazy" />
+        </div>
+        <div class="hero__shade"></div>
+
+        <div class="hero__arrows">
+          <button class="hero__arrow" id="heroPrev" aria-label="Anterior">←</button>
+          <button class="hero__arrow" id="heroNext" aria-label="Siguiente">→</button>
+        </div>
+
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Nuevo menú</p>
+          <h1 class="hero__title">Hecha a<br />la brasa</h1>
+          <a href="#pedido" class="btn btn--hero">Ordenar ahora →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Menú ░░ -->
+    <section class="menu" id="menu">
+      <div class="menu__tabs" role="tablist" aria-label="Categorías del menú">
+        <button class="menu__tab is-active" role="tab" aria-selected="true" data-cat="burgers">Hamburguesas</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-cat="pollo">Pollo</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-cat="sides">Acompañamientos</button>
+      </div>
+
+      <!-- Hamburguesas -->
+      <div class="menu__grid" data-panel="burgers">
+        <article class="card">
+          <div class="card__media tint-1">
+            <span class="tag">Popular</span>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="La Clásica" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>La Clásica</h3><span class="card__price">Bs 45</span></div>
+            <p>Carne de res 150g, cheddar, lechuga, tomate, cebolla, pepinillos y salsa brasa en pan artesanal de papa.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-2">
+            <span class="tag">Popular</span>
+            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Doble Brasa" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Doble Brasa</h3><span class="card__price">Bs 62</span></div>
+            <p>Doble carne 300g, doble cheddar, cebolla caramelizada, bacon y salsa ahumada. Para el hambre en serio.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-3">
+            <span class="badge" title="Contiene gluten">G</span>
+            <img src="https://images.unsplash.com/photo-1610440042657-612c34d95e9f?auto=format&fit=crop&w=800&q=80" alt="BBQ Bacon" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>BBQ Bacon</h3><span class="card__price">Bs 58</span></div>
+            <p>Carne 150g, bacon crocante, aros de cebolla, cheddar y salsa BBQ de la casa. Dulce, ahumada y jugosa.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pollo -->
+      <div class="menu__grid" data-panel="pollo" hidden>
+        <article class="card">
+          <div class="card__media tint-2">
+            <span class="tag">Popular</span>
+            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?auto=format&fit=crop&w=800&q=80" alt="Crispy Pollo" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Crispy Pollo</h3><span class="card__price">Bs 48</span></div>
+            <p>Pechuga empanizada crocante, lechuga, tomate, pepinillos y mayo de hierbas en pan brioche.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-3">
+            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" alt="Pollo Picante" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Pollo Picante</h3><span class="card__price">Bs 52</span></div>
+            <p>Pollo crocante bañado en salsa buffalo, blue cheese, apio en juliana y cebolla morada. Con carácter.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-1">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80" alt="Pollo Ranch" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Pollo Ranch</h3><span class="card__price">Bs 50</span></div>
+            <p>Pollo a la plancha, bacon, cheddar, lechuga, tomate y salsa ranch. Fresca y equilibrada.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Acompañamientos -->
+      <div class="menu__grid" data-panel="sides" hidden>
+        <article class="card">
+          <div class="card__media tint-3">
+            <span class="tag">Popular</span>
+            <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80" alt="Papas Brasa" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Papas Brasa</h3><span class="card__price">Bs 22</span></div>
+            <p>Papas rústicas con nuestro sazón de la casa y un toque ahumado. El clásico que nunca falla.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-1">
+            <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80" alt="Aros de Cebolla" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Aros de Cebolla</h3><span class="card__price">Bs 25</span></div>
+            <p>Aros de cebolla empanizados y crocantes, con salsa brasa para mojar. Imposible comer solo uno.</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media tint-2">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Papas Cheddar" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <div class="card__row"><h3>Papas Cheddar</h3><span class="card__price">Bs 30</span></div>
+            <p>Papas cubiertas con cheddar fundido, bacon crocante y cebollín. Para compartir (o no).</p>
+            <a href="#pedido" class="card__order">Ordenar →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu__foot">
+        <a href="#pedido" class="btn btn--pill">Ver el menú completo →</a>
+      </div>
+    </section>
+
+    <!-- ░░ Historia / Calidad ░░ -->
+    <section class="story" id="historia">
+      <div class="story__media">
+        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=1200&q=80" alt="Hamburguesa artesanal en mano" loading="lazy" />
+      </div>
+      <div class="story__copy">
+        <p class="eyebrow">Nuestra cocina</p>
+        <h2>De la parrilla,<br />no del microondas.</h2>
+        <p class="story__text">
+          Molemos la carne cada mañana, horneamos el pan con panaderos locales y cocinamos
+          cada hamburguesa a la brasa, al momento. Sin atajos, sin congelados: solo sabor
+          de verdad.
+        </p>
+        <div class="values">
+          <div class="value"><span>✓</span> 100% carne de res</div>
+          <div class="value"><span>✓</span> Pan artesanal del día</div>
+          <div class="value"><span>✓</span> Ingredientes locales</div>
+          <div class="value"><span>✓</span> Lista en 12 minutos</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Franja destacada ░░ -->
+    <section class="band">
+      <p class="band__kicker">★ Combo del día</p>
+      <h2 class="band__title">Clásica + Papas Brasa + Bebida</h2>
+      <p class="band__price">Bs 65 <span>· todos los días hasta agotar</span></p>
+      <a href="#pedido" class="btn btn--hero">Lo quiero →</a>
+    </section>
+
+    <!-- ░░ Pedido ░░ -->
+    <section class="order" id="pedido">
+      <div class="order__inner">
+        <div class="order__copy">
+          <p class="eyebrow">Hacé tu pedido</p>
+          <h2>Pedí en 1 minuto.</h2>
+          <p class="order__text">
+            Armá tu pedido y al enviar se abre WhatsApp con todo listo. Coordinamos delivery
+            o retiro en el local y te confirmamos el tiempo de espera.
+          </p>
+          <ul class="order__points">
+            <li><span>Horario</span> Todos los días · 11:30 – 23:00</li>
+            <li><span>Delivery</span> Santa Cruz de la Sierra</li>
+            <li><span>WhatsApp</span> +591 700 33 221</li>
+          </ul>
+        </div>
+
+        <form class="order__form" id="orderForm" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="field">
+            <label for="telefono">WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+591 ..." required />
+          </div>
+          <div class="field field--full">
+            <label for="pedido">Tu pedido</label>
+            <textarea id="pedido" name="pedido" rows="3" placeholder="Ej: 2x Doble Brasa, 1x Papas Cheddar, 2x bebida" required></textarea>
+          </div>
+          <div class="field">
+            <label for="tipo">Entrega</label>
+            <select id="tipo" name="tipo">
+              <option>Delivery</option>
+              <option>Retiro en local</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="direccion">Dirección / Local</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección o local de retiro" />
+          </div>
+          <button type="submit" class="btn btn--submit">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:4px">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.2c-.25.7-1.44 1.33-1.98 1.38-.53.05-1.02.24-3.43-.72-2.9-1.14-4.75-4.1-4.9-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.08 1-2.37.24-.26.53-.33.7-.33h.5c.16 0 .38-.06.59.45.25.6.84 2.07.91 2.22.07.15.12.32.02.51-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.57.16.28.73 1.2 1.57 1.95 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.18-.28.36-.23.6-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.32.07.12.07.66-.18 1.36Z"/>
+            </svg>
+            Enviar pedido por WhatsApp
+          </button>
+          <p class="order__note" id="formNote" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ░░ Locales ░░ -->
+    <section class="locals" id="locales">
+      <div class="locals__grid">
+        <div class="local">
+          <h3>Equipetrol</h3>
+          <p>Av. San Martín c/ 3er Anillo<br />Santa Cruz de la Sierra<br />11:30 – 23:00</p>
+        </div>
+        <div class="local">
+          <h3>Ventura Mall</h3>
+          <p>Patio de comidas, nivel 1<br />Santa Cruz de la Sierra<br />10:00 – 22:00</p>
+        </div>
+        <div class="local">
+          <h3>Contacto</h3>
+          <p>+591 700 33 221<br />hola@brasa.bo<br />@brasa.bo</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░ Footer ░░ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="footer__brand">brasa</span>
+      <p class="footer__tag">Hamburguesas a la brasa · Santa Cruz</p>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> brasa · Marca de demostración</p>
+      <div class="footer__social">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
