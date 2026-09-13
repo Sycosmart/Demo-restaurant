@@ -49,6 +49,30 @@
     restart();
   }
 
+  /* ---- Hero share (demo) ---- */
+  var share = document.getElementById("heroShare");
+  if (share) {
+    share.addEventListener("click", function () {
+      var data = { title: "brasa", text: "Hamburguesas a la brasa", url: location.href };
+      if (navigator.share) { navigator.share(data).catch(function () {}); }
+      else if (navigator.clipboard) {
+        navigator.clipboard.writeText(location.href).then(function () {
+          share.lastChild.nodeValue = "";
+          share.childNodes[0].nodeValue = "¡Link copiado! ";
+        }).catch(function () {});
+      }
+    });
+  }
+
+  /* ---- Hero language switch (demo, visual only) ---- */
+  var langBtns = document.querySelectorAll(".hero__lang button");
+  langBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      langBtns.forEach(function (x) { x.classList.remove("is-active"); });
+      b.classList.add("is-active");
+    });
+  });
+
   /* ---- Menu tabs ---- */
   var tabs = document.querySelectorAll(".menu__tab");
   var panels = document.querySelectorAll(".menu__grid");
