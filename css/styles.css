@@ -89,7 +89,10 @@ h1, h2, h3 { font-weight: 600; line-height: 1.02; letter-spacing: -0.02em; }
 .hero { position: relative; background: var(--black); overflow: hidden; min-height: clamp(520px, 76vh, 780px); display: flex; }
 .hero__word { position: absolute; top: clamp(1rem, 5vh, 4rem); left: 50%; transform: translateX(-50%); z-index: 1; font-family: var(--display); font-weight: 400; color: #fff; text-transform: uppercase; letter-spacing: 0.01em; font-size: clamp(5rem, 25vw, 21rem); line-height: 0.8; white-space: nowrap; user-select: none; pointer-events: none; }
 .hero__slides { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; }
-.hero__slides img { position: absolute; max-width: min(72%, 780px); max-height: 82%; object-fit: contain; opacity: 0; transition: opacity 0.8s var(--ease); filter: drop-shadow(0 30px 45px rgba(0,0,0,0.65)); }
+.hero__slides img { position: absolute; max-width: min(72%, 780px); max-height: 82%; object-fit: contain; opacity: 0; transition: opacity 0.8s var(--ease);
+  /* Fade the photo's dark square edges into the black hero so the word shows through */
+  -webkit-mask-image: radial-gradient(ellipse 56% 60% at 50% 45%, #000 52%, rgba(0,0,0,0) 88%);
+          mask-image: radial-gradient(ellipse 56% 60% at 50% 45%, #000 52%, rgba(0,0,0,0) 88%); }
 .hero__slides img.is-active { opacity: 1; }
 
 .hero__arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; width: 54px; height: 54px; border-radius: 50%; background: var(--amber); color: var(--black); font-size: 1.7rem; font-weight: 700; line-height: 1; display: grid; place-items: center; transition: background 0.25s, transform 0.25s; }
