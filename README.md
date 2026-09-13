@@ -31,7 +31,7 @@ burger-demo/
 ## Configuración
 
 - **Número de WhatsApp:** editá la constante `WHATSAPP_NUMBER` en
-  [`js/main.js`](js/main.js) — formato internacional solo dígitos (ej. `59170033221`).
+  [`js/main.js`](js/main.js) — formato internacional solo dígitos (ej. `59170000000`).
 - **Imágenes:** cargan desde Unsplash como marcadores. Para producción, reemplazá por
   fotos reales de los productos en `assets/`.
 - **Contenido** (marca, precios, dirección, teléfono) es de demostración.

@@ -78,8 +78,9 @@
   }
 
   /* ---- Order form → WhatsApp ---- */
-  // Número de WhatsApp del local (formato internacional, solo dígitos).
-  var WHATSAPP_NUMBER = "59170033221";
+  // Número de WhatsApp del local — EJEMPLO. Reemplazá por el real (formato
+  // internacional, solo dígitos, ej. 5917XXXXXXX) antes de publicar.
+  var WHATSAPP_NUMBER = "59170000000";
 
   var form = document.getElementById("orderForm");
   if (form) {
